@@ -4,9 +4,9 @@ import App from "./app/app.tsx"
 import React from "react"
 import { registerRootComponent } from "expo"
 import * as SplashScreen from "expo-splash-screen"
-
+import  Realm  from "realm";
 SplashScreen.preventAutoHideAsync()
-
+export let realmDatabase = new Realm( )
 function IgniteApp() {
   return <App hideSplashScreen={SplashScreen.hideAsync} />
 }
